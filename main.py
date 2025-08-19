@@ -128,7 +128,7 @@ def submit_answers(payload: SubmitAnswersRequest, background_tasks: BackgroundTa
             update_day_status(PROGRESS_DB_PATH, payload.day, "completed")
 
             # write passed date
-            #write_passed_date(PASSED_DATE_FILE, payload.day)
+            write_passed_date(PASSED_DATE_FILE, payload.day)
 
             # Unlock next day
             current_day_num = int(payload.day.split("_")[1])
