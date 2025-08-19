@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "practical",
+    "question": "Implement a custom UserDetailsService that loads user information (username, password, roles) from an in-memory data source. Integrate this service into Spring Security to authenticate users against this custom user store.",
+    "options": null,
+    "correctAnswer": null,
+    "expectedOutcome": "Student should create a class implementing UserDetailsService, load users from an in-memory source, and configure Spring Security to use this service for authentication.",
+    "topic": "Custom UserDetailsService Implementation",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "practical",
+    "question": "Create a Spring Security configuration class that secures endpoints such that /admin/** URLs can only be accessed by users with the role ROLE_ADMIN, /user/** URLs are accessible by users with either ROLE_ADMIN or ROLE_USER, all other URLs require authentication, and enables form-based login with a custom login page.",
+    "options": null,
+    "correctAnswer": null,
+    "expectedOutcome": "Student should configure HttpSecurity to enforce role-based access for /admin/** and /user/** paths, require authentication for all other paths, and set up a form-based login with a custom page.",
+    "topic": "Spring Security Configuration",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "practical",
+    "question": "Develop a filter chain setup that includes a custom authentication filter extracting username/password from request parameters, handles unauthorized access by sending HTTP 401 status, and demonstrates disabling CSRF protection for a stateless REST API endpoint.",
+    "options": null,
+    "correctAnswer": null,
+    "expectedOutcome": "Student should create a custom authentication filter, configure it in the filter chain, return HTTP 401 for unauthorized access, and disable CSRF for stateless REST API endpoints.",
+    "topic": "Custom Filter Chain and CSRF Configuration",
+    "order": 3
+  }
+]

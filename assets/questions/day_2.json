@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "Which statement best describes Spring Boot?",
+    "options": [
+      "A lightweight alternative to Java EE with built-in servlet containers",
+      "An automated version of the Spring Framework that simplifies configuration and setup",
+      "A tool for converting XML files into Java annotations",
+      "A replacement for the Java Virtual Machine"
+    ],
+    "correctAnswer": "An automated version of the Spring Framework that simplifies configuration and setup",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Basics",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "mcq",
+    "question": "Which Spring Boot feature is responsible for automatically configuring beans based on the dependencies present in the classpath?",
+    "options": [
+      "Spring Initializr",
+      "Spring CLI",
+      "Autoconfiguration",
+      "Externalized Configuration"
+    ],
+    "correctAnswer": "Autoconfiguration",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Basics",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "question": "In the Spring Boot architecture, which layer is responsible for handling HTTP requests and authentication before passing data to the business layer?",
+    "options": [
+      "Business Layer",
+      "Presentation Layer",
+      "Persistence Layer",
+      "Database Layer"
+    ],
+    "correctAnswer": "Presentation Layer",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Architecture",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "What is the primary feature of the Spring Framework?",
+    "options": [
+      "Autoconfiguration",
+      "Dependency Injection",
+      "Built-in CLI tools",
+      "REST API generation"
+    ],
+    "correctAnswer": "Dependency Injection",
+    "expectedOutcome": null,
+    "topic": "Spring Framework Basics",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "mcq",
+    "question": "Which of the following is NOT a feature of Spring Boot compared to the Spring Framework?",
+    "options": [
+      "Built-in or embedded servers like Tomcat and Jetty",
+      "Default configurations for faster bootstrapping",
+      "Requirement of XML configuration for application setup",
+      "Support for in-memory databases like H2"
+    ],
+    "correctAnswer": "Requirement of XML configuration for application setup",
+    "expectedOutcome": null,
+    "topic": "Spring Boot vs Spring Framework",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "Which of the following best explains the difference in server dependency between Spring and Spring Boot?",
+    "options": [
+      "Both require manual server setup",
+      "Spring Boot includes built-in servers, while Spring requires explicit server setup",
+      "Spring uses only Tomcat, while Spring Boot uses only Jetty",
+      "Spring Boot cannot run without an external server"
+    ],
+    "correctAnswer": "Spring Boot includes built-in servers, while Spring requires explicit server setup",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Basics",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "Which Spring Boot feature helps in binding configuration properties to Java objects?",
+    "options": [
+      "Dependency Injection",
+      "Externalized Configuration",
+      "Bean Validation",
+      "Component Scanning"
+    ],
+    "correctAnswer": "Externalized Configuration",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Basics",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "type": "mcq",
+    "question": "In a typical Spring Boot application architecture, which layer interacts directly with the database?",
+    "options": [
+      "Presentation Layer",
+      "Business Layer",
+      "Persistence Layer",
+      "Integration Layer"
+    ],
+    "correctAnswer": "Persistence Layer",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Architecture",
+    "order": 8
+  },
+  {
+    "id": 9,
+    "type": "mcq",
+    "question": "Which tool allows developers to quickly create a Spring Boot project with chosen dependencies?",
+    "options": [
+      "Spring Runner",
+      "Spring Initializr",
+      "Spring CLI",
+      "Spring Autoconfigure"
+    ],
+    "correctAnswer": "Spring Initializr",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Tools",
+    "order": 9
+  },
+  {
+    "id": 10,
+    "type": "mcq",
+    "question": "Which of the following is an advantage of using Spring Boot over traditional Spring?",
+    "options": [
+      "Requires more XML configuration",
+      "Requires manual dependency setup for each module",
+      "Provides embedded servers for faster setup",
+      "Lacks production-ready defaults"
+    ],
+    "correctAnswer": "Provides embedded servers for faster setup",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Advantages",
+    "order": 10
+  }
+]

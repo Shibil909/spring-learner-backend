@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "What is the primary purpose of Spring Boot Actuator?",
+    "options": [
+      "To create user interfaces for Spring Boot applications",
+      "To add production-ready features like monitoring, metrics, and health checks",
+      "To manage database migrations only",
+      "To replace Spring Security"
+    ],
+    "correctAnswer": "To add production-ready features like monitoring, metrics, and health checks",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "mcq",
+    "question": "Which dependency is required to enable Spring Boot Actuator in a Maven project?",
+    "options": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-actuator",
+      "spring-boot-starter-security",
+      "spring-boot-starter-data-jpa"
+    ],
+    "correctAnswer": "spring-boot-starter-actuator",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "question": "By default, which actuator endpoints are enabled?",
+    "options": [
+      "/metrics and /logfile",
+      "/health and /info",
+      "/shutdown and /beans",
+      "All endpoints are enabled by default"
+    ],
+    "correctAnswer": "/health and /info",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "What property is used to expose all actuator endpoints over HTTP?",
+    "options": [
+      "management.endpoints.web.base-path=/",
+      "management.endpoints.web.exposure.include=*",
+      "management.endpoint.health.group.custom.include=*",
+      "management.endpoint.metrics.enabled=true"
+    ],
+    "correctAnswer": "management.endpoints.web.exposure.include=*",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "mcq",
+    "question": "How can actuator endpoints be secured using Spring Security?",
+    "options": [
+      "By creating a custom HealthIndicator",
+      "By adding a rule for /actuator/** in the security filter chain",
+      "By enabling all endpoints in application.properties",
+      "By modifying the /info endpoint"
+    ],
+    "correctAnswer": "By adding a rule for /actuator/** in the security filter chain",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "Which endpoint provides aggregated health information of the application?",
+    "options": [
+      "/metrics",
+      "/health",
+      "/env",
+      "/beans"
+    ],
+    "correctAnswer": "/health",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "Which interface is used to implement reactive health checks?",
+    "options": [
+      "HealthIndicator",
+      "ReactiveHealthIndicator",
+      "MeterRegistry",
+      "WebClient"
+    ],
+    "correctAnswer": "ReactiveHealthIndicator",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "type": "mcq",
+    "question": "What is the purpose of Micrometer in Spring Boot Actuator?",
+    "options": [
+      "To provide database migrations",
+      "To handle reactive web requests",
+      "To provide metrics collection and monitoring",
+      "To generate heap dumps"
+    ],
+    "correctAnswer": "To provide metrics collection and monitoring",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 8
+  },
+  {
+    "id": 9,
+    "type": "mcq",
+    "question": "How can health indicators be grouped in Spring Boot?",
+    "options": [
+      "By creating multiple /health endpoints manually",
+      "Using management.endpoint.health.group.<group-name>.include in application.properties",
+      "By configuring Micrometer tags",
+      "By modifying the /info endpoint"
+    ],
+    "correctAnswer": "Using management.endpoint.health.group.<group-name>.include in application.properties",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 9
+  },
+  {
+    "id": 10,
+    "type": "mcq",
+    "question": "What does the /actuator endpoint return by default?",
+    "options": [
+      "Health status only",
+      "Metrics only",
+      "A discovery list of all available actuator endpoints",
+      "Application logs"
+    ],
+    "correctAnswer": "A discovery list of all available actuator endpoints",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Actuator",
+    "order": 10
+  }
+]

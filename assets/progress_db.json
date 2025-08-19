@@ -1,0 +1,44 @@
+[
+  {
+    "day_1": {
+      "status": "unlocked",
+      "message": "Every expert was once a beginner."
+    },
+    "day_2": {
+      "status": "locked",
+      "message": "Consistency beats intensity."
+    },
+    "day_3": {
+      "status": "locked",
+      "message": "Momentum is built, not bought"
+    },
+    "day_4": {
+      "status": "locked",
+      "message": "Slow growth is still growth"
+    },
+    "day_5": {
+      "status": "locked",
+      "message": "Show up. Even when it’s not perfect"
+    },
+    "day_6": {
+      "status": "locked",
+      "message": "Stay patient and trust your journey."
+    },
+    "day_7": {
+      "status": "locked",
+      "message": "Curiosity deepens when answers aren’t obvious"
+    },
+    "day_8": {
+      "status": "locked",
+      "message": "Be kind to yourself. You’re doing the best you can"
+    },
+    "day_9": {
+      "status": "locked",
+      "message": "Believe in progress, not perfection."
+    },
+    "day_10": {
+      "status": "locked",
+      "message": "See that's it. Congratulations !!!"
+    }
+  }
+]

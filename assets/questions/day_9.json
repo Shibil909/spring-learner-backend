@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "What is the primary purpose of Spring Boot starters?",
+    "options": [
+      "To manually specify each dependency for a project",
+      "To provide a set of convenient dependency descriptors for common use cases",
+      "To replace Java entirely",
+      "To create database schemas automatically"
+    ],
+    "correctAnswer": "To provide a set of convenient dependency descriptors for common use cases",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Starters",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "mcq",
+    "question": "Which starter would you use to create a RESTful web service in Spring Boot?",
+    "options": [
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-web",
+      "spring-boot-starter-mail",
+      "spring-boot-starter-test"
+    ],
+    "correctAnswer": "spring-boot-starter-web",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Starters",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "question": "Which Spring Boot starter automatically includes testing libraries like JUnit, Hamcrest, and Mockito?",
+    "options": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-test",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-mail"
+    ],
+    "correctAnswer": "spring-boot-starter-test",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Starters",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "What does the @WebAppConfiguration annotation indicate in Spring Boot tests?",
+    "options": [
+      "It loads a web application context for testing",
+      "It configures the database connection",
+      "It sets up email server properties",
+      "It starts the embedded Tomcat server automatically"
+    ],
+    "correctAnswer": "It loads a web application context for testing",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Testing",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "mcq",
+    "question": "Which starter is used for database persistence with JPA in Spring Boot?",
+    "options": [
+      "spring-boot-starter-mail",
+      "spring-boot-starter-test",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-web"
+    ],
+    "correctAnswer": "spring-boot-starter-data-jpa",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Starters",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "Which in-memory database is used by default in the Data JPA starter example?",
+    "options": [
+      "MySQL",
+      "PostgreSQL",
+      "H2",
+      "Oracle"
+    ],
+    "correctAnswer": "H2",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Starters",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "What is the main purpose of Spring Boot auto-configuration?",
+    "options": [
+      "To manually configure all Spring beans",
+      "To automatically configure your Spring application based on the jar dependencies",
+      "To replace Spring Framework entirely",
+      "To disable all Spring beans"
+    ],
+    "correctAnswer": "To automatically configure your Spring application based on the jar dependencies",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Auto-configuration",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "type": "mcq",
+    "question": "Which annotation is recommended to use as a single entry point for configuration and auto-configuration?",
+    "options": [
+      "@ComponentScan",
+      "@Configuration",
+      "@SpringBootApplication",
+      "@Service"
+    ],
+    "correctAnswer": "@SpringBootApplication",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Auto-configuration",
+    "order": 8
+  },
+  {
+    "id": 9,
+    "type": "mcq",
+    "question": "What happens if you define your own DataSource bean in a Spring Boot application?",
+    "options": [
+      "Spring Boot ignores your DataSource bean",
+      "The default embedded database auto-configuration backs away",
+      "The application fails to start",
+      "Spring Boot throws an exception"
+    ],
+    "correctAnswer": "The default embedded database auto-configuration backs away",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Auto-configuration",
+    "order": 9
+  },
+  {
+    "id": 10,
+    "type": "mcq",
+    "question": "How can you check which auto-configuration classes are being applied at runtime?",
+    "options": [
+      "Using the @Bean annotation",
+      "Starting the application with the --debug switch",
+      "Using spring.datasource.url property",
+      "Checking application.properties only"
+    ],
+    "correctAnswer": "Starting the application with the --debug switch",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Auto-configuration",
+    "order": 10
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "Which component in Spring MVC is responsible for handling all HTTP requests and responses?",
+    "options": ["Controller", "ViewResolver", "DispatcherServlet", "HandlerMapping"],
+    "correctAnswer": "DispatcherServlet",
+    "expectedOutcome": null,
+    "topic": "Spring MVC Basics",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "mcq",
+    "question": "What is the role of InternalResourceViewResolver in Spring MVC?",
+    "options": ["Handles incoming HTTP requests", "Resolves logical view names to actual view files", "Configures the DispatcherServlet mappings", "Creates the Model object"],
+    "correctAnswer": "Resolves logical view names to actual view files",
+    "expectedOutcome": null,
+    "topic": "Spring MVC View Resolution",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "practical",
+    "question": "Write a Spring MVC HelloController class mapped to /hello that handles GET requests and adds a 'message' attribute to the model with the value 'Hello Spring MVC Framework!', returning the logical view name 'hello'.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Student should create a Java class annotated with @Controller and @RequestMapping, handle GET requests, add a model attribute, and return the correct logical view name.",
+    "topic": "Spring MVC Controller",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "Where should the [servlet-name]-servlet.xml file be placed by default in a Spring MVC application?",
+    "options": ["WebContent/WEB-INF", "src/main/java", "src/main/resources", "META-INF"],
+    "correctAnswer": "WebContent/WEB-INF",
+    "expectedOutcome": null,
+    "topic": "Spring MVC Configuration",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "practical",
+    "question": "Create a web.xml configuration that maps the HelloWeb DispatcherServlet to handle all .jsp requests, and ensure it loads HelloWeb-servlet.xml from /WEB-INF/.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Student should write a valid web.xml file defining the DispatcherServlet, its mapping, and the correct application context file location.",
+    "topic": "Spring MVC Configuration",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "practical",
+    "question": "Implement a class TokenManager in Java that can: Generate a JWT token with username as subject and expiration of 10 hours; Validate a given JWT token against a stored user's details; Extract the username from a given JWT token; Include proper signing using a secret key and HS256 algorithm.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Student should implement a Java class with methods for generating JWT tokens, validating tokens, and extracting usernames, using HS256 signing and a secret key, with expiration set to 10 hours.",
+    "topic": "JWT Security in Java",
+    "order": 6
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "type": "yes_no",
+    "question": "Did you set up your Java development environment with Java 17 or later, and a build tool (Maven 3.5+ or Gradle 7.5+)?",
+    "options": ["Yes", "No"],
+    "correctAnswer": "Yes",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Setup",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "yes_no",
+    "question": "Have you tried creating your first Spring Boot project using Spring Initializr (either via the website or IDE integration)?",
+    "options": ["Yes", "No"],
+    "correctAnswer": "Yes",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Setup",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "yes_no",
+    "question": "Did you successfully run your first Spring Boot application and see “Greetings from Spring Boot!” in the browser or using curl?",
+    "options": ["Yes", "No"],
+    "correctAnswer": "Yes",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Setup",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "yes_no",
+    "question": "Did you add and run a basic unit test for the HelloController endpoint?",
+    "options": ["Yes", "No"],
+    "correctAnswer": "Yes",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Testing",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "mcq",
+    "question": "Which annotation is commonly used to define a bean in Spring?",
+    "options": ["@Bean", "@Autowired", "@Component", "@Service"],
+    "correctAnswer": "@Component",
+    "expectedOutcome": null,
+    "topic": "Spring Beans",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "What is the process of identifying a dependency, finding a matching bean, and injecting it into another bean called?",
+    "options": ["Dependency Resolution", "Autowiring", "IoC Injection", "Component Scanning"],
+    "correctAnswer": "Autowiring",
+    "expectedOutcome": null,
+    "topic": "Spring Beans",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "If multiple beans of the same type are available and @Autowired is used without specifying which one to use, what will Spring do?",
+    "options": ["Pick one randomly", "Use the bean with the earliest creation time", "Throw an error", "Inject null"],
+    "correctAnswer": "Throw an error",
+    "expectedOutcome": null,
+    "topic": "Spring Beans",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "type": "mcq",
+    "question": "Which statement best describes Inversion of Control (IoC)?",
+    "options": [
+      "The application controls when and how dependencies are created",
+      "The framework controls the creation and injection of dependencies",
+      "The user manually wires dependencies using XML files",
+      "The JVM controls the execution of beans"
+    ],
+    "correctAnswer": "The framework controls the creation and injection of dependencies",
+    "expectedOutcome": null,
+    "topic": "Spring Beans",
+    "order": 8
+  },
+  {
+    "id": 9,
+    "type": "mcq",
+    "question": "Which IoC container does Spring recommend using in most applications?",
+    "options": ["Bean Factory", "Application Context", "Servlet Context", "Service Locator"],
+    "correctAnswer": "Application Context",
+    "expectedOutcome": null,
+    "topic": "Spring Beans",
+    "order": 9
+  },
+  {
+    "id": 10,
+    "type": "practical",
+    "question": "Create a simple Spring Boot project where a Car class depends on an Engine class. Use @Component and @Autowired to demonstrate dependency injection, and print a message from Engine when Car starts.",
+    "options": null,
+    "correctAnswer": null,
+    "expectedOutcome": "When running the application, Spring should automatically inject Engine into Car and display the message from the injected engine instance.",
+    "topic": "Spring Beans - Practical",
+    "order": 10
+  }
+]

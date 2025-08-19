@@ -1,0 +1,17 @@
+[
+  {
+    "id":1,
+    "question_type": "Project",
+    "question": "Build a Spring Boot REST API secured with JWT-based authentication and role-based authorization. The project will guide you through default security behavior, customizing for stateless JWT authentication, configuring HTTP security, implementing a JWT filter, creating a login API, adding role-based authorization, and testing secured endpoints.",
+    "topic": "Spring Security JWT Project",
+    "tasks": {
+      "task_1": "Initial Project Setup and Default Security Behavior: Create a Maven project using Spring Initializr with Spring Web and Spring Security. Create a HelloRestController with /hello/user and /hello/admin endpoints. Run the application, observe default behavior, find the auto-generated password, configure a static password in application.properties, and explain why adding spring-boot-starter-security introduces session-based security.",
+      "task_2": "Customizing for Stateless, JWT-based Authentication: Create SecurityConfig extending WebSecurityConfigurerAdapter and annotate with @EnableWebSecurity. Override configure(AuthenticationManagerBuilder) to register a custom UserDetailsService with mock/in-memory users. Add a BCryptPasswordEncoder bean and expose AuthenticationManager as a bean for login API use.",
+      "task_3": "Configuring HTTP Security for a REST API: Override configure(HttpSecurity) in SecurityConfig. Enable CORS, disable CSRF, set session creation policy to STATELESS, add exception handler for unauthorized requests returning HttpServletResponse.SC_UNAUTHORIZED, and define endpoint permissions using antMatchers (e.g., /api/public/** accessible to all, others require authentication).",
+      "task_4": "Implementing the JWT Token Filter: Create JwtTokenFilter extending OncePerRequestFilter. Implement doFilterInternal to extract the JWT from Authorization header, validate it using JwtTokenUtil, retrieve user details and authorities if valid, and set authentication in SecurityContextHolder. Add JwtTokenFilter to security filter chain before UsernamePasswordAuthenticationFilter and explain why placement matters.",
+      "task_5": "Creating a Login API: Create AuthApi REST controller. Implement POST /api/public/login that accepts username and password, inject AuthenticationManager to authenticate credentials, and if successful, generate JWT with JwtTokenUtil and return it in Authorization response header.",
+      "task_6": "Role-Based Authorization: Enable global method security in SecurityConfig with @EnableGlobalMethodSecurity(prePostEnabled = true, jsr250Enabled = true). Create UserAdminApi controller with @RolesAllowed('USER_ADMIN') at class level. In AuthorApi controller, use @RolesAllowed('AUTHOR_ADMIN') on methods like create/edit/delete while leaving other methods public or authenticated. Disable default ROLE_ prefix via GrantedAuthorityDefaults bean and explain the benefit.",
+      "task_7": "Integration Testing Secured Endpoints: Add spring-security-test dependency. Write integration tests for secured endpoints using @WithMockUser to simulate a user with required role (e.g., AUTHOR_ADMIN) and test successful access. Write tests simulating a user without required role and assert that access is denied (e.g., 403 Forbidden)."
+    }
+  }
+]

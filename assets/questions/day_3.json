@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "Which Spring XML configuration tag is used to load environment-specific property files?",
+    "options": [
+      "<context:component-scan>",
+      "<context:property-placeholder>",
+      "<bean>",
+      "<import>"
+    ],
+    "correctAnswer": "<context:property-placeholder>",
+    "expectedOutcome": null,
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "mcq",
+    "question": "In Java-based configuration, which annotation can be used to load environment-specific properties?",
+    "options": [
+      "@ConfigurationProperties",
+      "@EnableConfiguration",
+      "@PropertySource",
+      "@Value"
+    ],
+    "correctAnswer": "@PropertySource",
+    "expectedOutcome": null,
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "question": "Where are environment-specific .properties files typically placed in a Maven project?",
+    "options": [
+      "src/test/java",
+      "src/main/java",
+      "src/main/resources",
+      "src/config/resources"
+    ],
+    "correctAnswer": "src/main/resources",
+    "expectedOutcome": null,
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "practical",
+    "question": "Write a Spring Java configuration class that loads a persistence-${envTarget}.properties file from the classpath. The envTarget variable should default to dev if not set.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Student should be able to use @Configuration and @PropertySource with placeholder syntax to load the correct environment-specific .properties file.",
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "practical",
+    "question": "Modify a Maven pom.xml to set the envTarget property to h2_test for integration tests using the Maven Surefire Plugin.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Student should configure <systemPropertyVariables> inside the Surefire Plugin to set envTarget for tests, ensuring the correct test properties file is loaded.",
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "practical",
+    "question": "Write the Java code for a configuration class named AppConfig that uses an annotation to define a bean. The bean should be named myService and return an instance of the class com.journaldev.spring.main.MyService.",
+    "options": [],
+    "correctAnswer": null,
+    "expectedOutcome": "Java class that uses two key annotations to configure a Spring Bean.",
+    "topic": "Spring Environment-Specific Configuration",
+    "order": 6
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "question": "Which of the following is NOT a core concept of Spring Security?",
+    "options": [
+      "Authentication",
+      "Authorization",
+      "Password Storage",
+      "Load Balancing"
+    ],
+    "correctAnswer": "Load Balancing",
+    "expectedOutcome": null,
+    "topic": "Spring Security Basics",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "type": "yes_no",
+    "question": "Does Spring Security’s PasswordEncoder allow you to decrypt stored passwords?",
+    "options": ["Yes", "No"],
+    "correctAnswer": "No",
+    "expectedOutcome": null,
+    "topic": "Password Storage",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "type": "mcq",
+    "question": "Which Spring Security module provides web-based authentication and access control for URLs in a servlet environment?",
+    "options": [
+      "spring-security-core",
+      "spring-security-web",
+      "spring-security-config",
+      "spring-security-ldap"
+    ],
+    "correctAnswer": "spring-security-web",
+    "expectedOutcome": null,
+    "topic": "Spring Security Modules",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "type": "mcq",
+    "question": "In Spring Security, which filter is responsible for authenticating the user when a login request occurs?",
+    "options": [
+      "LogoutFilter",
+      "UsernamePasswordAuthenticationFilter",
+      "ExceptionTranslationFilter",
+      "FilterSecurityInterceptor"
+    ],
+    "correctAnswer": "UsernamePasswordAuthenticationFilter",
+    "expectedOutcome": null,
+    "topic": "Spring Security Filters",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "type": "yes_no",
+    "question": "By default, adding spring-boot-starter-security to a project will secure all endpoints.",
+    "options": ["Yes", "No"],
+    "correctAnswer": "Yes",
+    "expectedOutcome": null,
+    "topic": "Spring Boot Security Defaults",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "type": "mcq",
+    "question": "Which annotation is used to enable Spring Security in a Java configuration class?",
+    "options": [
+      "@EnableSecurity",
+      "@EnableWebSecurity",
+      "@EnableSpringSecurity",
+      "@WebSecurity"
+    ],
+    "correctAnswer": "@EnableWebSecurity",
+    "expectedOutcome": null,
+    "topic": "Spring Security Configuration",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "type": "mcq",
+    "question": "In the <http> configuration, what does the access attribute define?",
+    "options": [
+      "URL pattern to match",
+      "Login form design",
+      "Access requirements for matched requests",
+      "HTTP request methods allowed"
+    ],
+    "correctAnswer": "Access requirements for matched requests",
+    "expectedOutcome": null,
+    "topic": "HTTP Security Configuration",
+    "order": 7
+  }
+]

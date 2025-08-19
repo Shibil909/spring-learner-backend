@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question_type": "Project",
+    "question": "Build a Spring Boot web application with OAuth2 social login and custom authentication logic. The project will guide you through setting up the application, securing it with OAuth2 providers (GitHub and Google), adding conditional content and logout functionality, implementing custom authentication rules, and handling authentication errors.",
+    "topic": "Spring Security OAuth2 Project",
+    "tasks": {
+      "task_1": "Set up a new Maven project using Spring Initializr. Include dependencies for a web application and Spring Security OAuth2. Add a simple index.html in the static folder using Bootstrap and jQuery for a basic home page.",
+      "task_2": "Secure the application with GitHub as the OAuth2 provider. Create a GitHub OAuth app, configure clientId and clientSecret in the Spring Boot application, and ensure that visiting http://localhost:8080 redirects unauthenticated users to GitHub login.",
+      "task_3": "Modify the home page to display conditional content: show a 'Login with GitHub' link for unauthenticated users, and display the logged-in user's name for authenticated users. Create a REST endpoint at /user to return the user's name and use jQuery AJAX to update the UI.",
+      "task_4": "Implement a logout feature visible only to authenticated users. Configure server-side logout handling with CSRF protection, clear the user session, and redirect to the home page.",
+      "task_5": "Integrate Google as a second OAuth2 provider. Update the home page to offer login options for both GitHub and Google, and configure the application to recognize both providers.",
+      "task_6": "Implement custom authentication logic for GitHub: only allow login if the user is a member of the 'spring-projects' organization. Create a custom OAuth2UserService using WebClient to check organization membership. Throw an OAuth2AuthenticationException if the check fails.",
+      "task_7": "Handle authentication errors gracefully. Save the exception message to the session in the authentication failure handler. Create a /error endpoint to return the message, and use jQuery AJAX to display the error to the user on the front end."
+    }
+  }
+]
