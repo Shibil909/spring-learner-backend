@@ -70,7 +70,7 @@ def get_questions(day: str):
                 return JSONResponse(
                 status_code=403,
                 content={
-                    "message": "illaa nte kutti wait cheyyu",
+                    "message": "payye thinna panayum thinna",
                     "remaining": remaining_str
                     }
                 )
