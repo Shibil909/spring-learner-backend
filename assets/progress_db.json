@@ -1,11 +1,11 @@
 [
   {
     "day_1": {
-      "status": "unlocked",
+      "status": "completed",
       "message": "Every expert was once a beginner."
     },
     "day_2": {
-      "status": "locked",
+      "status": "unlocked",
       "message": "Consistency beats intensity."
     },
     "day_3": {
