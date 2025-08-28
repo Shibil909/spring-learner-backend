@@ -13,7 +13,7 @@ from pydantic import BaseModel
 from utils.log_config import setup_logger
 from fastapi import BackgroundTasks
 
-logger = setup_logger(__name__)
+logger = setup_logger(__name__) 
 
 load_dotenv()
 PROGRESS_DB_PATH = os.getenv("PROGRESS_DB_PATH")
