@@ -9,11 +9,11 @@
       "message": "Consistency beats intensity."
     },
     "day_3": {
-      "status": "unlocked",
+      "status": "completed",
       "message": "Momentum is built, not bought"
     },
     "day_4": {
-      "status": "locked",
+      "status": "unlocked",
       "message": "Slow growth is still growth"
     },
     "day_5": {
