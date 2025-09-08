@@ -13,11 +13,11 @@
       "message": "Momentum is built, not bought"
     },
     "day_4": {
-      "status": "unlocked",
+      "status": "completed",
       "message": "Slow growth is still growth"
     },
     "day_5": {
-      "status": "locked",
+      "status": "unlocked",
       "message": "Show up. Even when it’s not perfect"
     },
     "day_6": {
