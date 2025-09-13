@@ -55,7 +55,7 @@ class AssessmentAnalyzer:
                     scored_points += correct_tasks
             
             # pass or not
-            passed = scored_points >= (total_points / 2)
+            passed = scored_points == total_points
             return {
                 "day": day,
                 "score": scored_points,
