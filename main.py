@@ -138,7 +138,7 @@ def submit_answers(payload: SubmitAnswersRequest, background_tasks: BackgroundTa
             
            
             # schedule reward mail in background
-            background_tasks.add_task(email_sender.send_reward, payload.day)
+            background_tasks.add_task(email_sender.send_reward_sendgrid, payload.day)
 
         logger.info(f"Assessment evaluated sucessfully")
         return result
