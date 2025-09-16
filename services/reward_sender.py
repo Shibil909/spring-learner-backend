@@ -8,7 +8,15 @@ from dotenv import load_dotenv
 from utils.helpers import load_json
 from utils.log_config import setup_logger
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail, InlineImage, Attachment, FileContent, FileName, FileType, Disposition, ContentId
+from sendgrid.helpers.mail import (
+    Mail,
+    Attachment,
+    FileContent,
+    FileName,
+    FileType,
+    Disposition,
+    ContentId
+)
 
 load_dotenv()
 logger = setup_logger(__name__)
@@ -84,44 +92,44 @@ class EmailSender:
                     logger.error(f"mail Server exit error:{str(e)}")
         return None
     
-    def send_reward_sendgrid(self, day: str) -> None:
-        """
-        Send reward mail via SendGrid.
-        """
-        try:
-            reward_data = load_json(self.reward_json)
-            reward_mail = next((r for r in reward_data if r["day"] == day), None)
-            if not reward_mail:
-                raise ValueError(f"No reward found for {day}")
+def send_reward_sendgrid(self, day: str) -> None:
+    """
+    Send reward mail via SendGrid.
+    """
+    try:
+        reward_data = load_json(self.reward_json)
+        reward_mail = next((r for r in reward_data if r["day"] == day), None)
+        if not reward_mail:
+            raise ValueError(f"No reward found for {day}")
 
-            body_html = reward_mail["reward_body"]
-            img_path  = reward_mail["reward_img"]
+        body_html = reward_mail["reward_body"]
+        img_path  = reward_mail["reward_img"]
 
-            message = Mail(
-                from_email=self.sender_email,   # must be a verified sender in SendGrid
-                to_emails=self.receiver_email,
-                subject="Stolen Hours ✨",
-                html_content=body_html
+        message = Mail(
+            from_email=self.sender_email,   # verified sender
+            to_emails=self.receiver_email,
+            subject="Stolen Hours ✨",
+            html_content=body_html
+        )
+
+        # Optional inline image
+        if os.path.exists(img_path):
+            with open(img_path, "rb") as f:
+                img_data = f.read()
+            encoded = base64.b64encode(img_data).decode()
+            attachment = Attachment(
+                FileContent(encoded),
+                FileName(os.path.basename(img_path)),
+                FileType("image/png"),
+                Disposition("inline"),       # marks as inline
+                ContentId("sampleimage")     # reference in HTML with <img src="cid:sampleimage">
             )
+            message.attachment = attachment
+        else:
+            logger.warning(f"Image {img_path} not found, sending without image.")
 
-            # Optional inline image
-            if os.path.exists(img_path):
-                with open(img_path, "rb") as f:
-                    img_data = f.read()
-                encoded = base64.b64encode(img_data).decode()
-                attachment = Attachment(
-                    FileContent(encoded),
-                    FileName(os.path.basename(img_path)),
-                    FileType("image/png"),
-                    Disposition("inline"),
-                    ContentId("sampleimage")
-                )
-                message.attachment = attachment
-            else:
-                logger.warning(f"Image {img_path} not found, sending without image.")
-
-            sg = SendGridAPIClient(os.environ["SENDGRID_API_KEY"])
-            sg.send(message)
-            logger.info(f"Email for {day} sent successfully via SendGrid.")
-        except Exception as e:
-            logger.error(f"SendGrid email error: {e}")
+        sg = SendGridAPIClient(os.environ["SENDGRID_API_KEY"])
+        sg.send(message)
+        logger.info(f"Email for {day} sent successfully via SendGrid.")
+    except Exception as e:
+        logger.error(f"SendGrid email error: {e}")
