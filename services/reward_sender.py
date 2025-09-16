@@ -133,3 +133,4 @@ class EmailSender:
             logger.info(f"Email for {day} sent successfully via SendGrid.")
         except Exception as e:
             logger.error(f"SendGrid email error: {e}")
+
