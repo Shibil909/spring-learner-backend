@@ -91,7 +91,7 @@ class EmailSender:
                 except Exception as e:
                     logger.error(f"mail Server exit error:{str(e)}")
         return None
-    # new mail pipeline
+    # new mail pipeline elevated
     def send_reward_sendgrid(self, day: str) -> None:
         """
         Send reward mail via SendGrid.
