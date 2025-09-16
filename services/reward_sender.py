@@ -18,7 +18,7 @@ class EmailSender:
         self.smtp_server = "smtp.gmail.com"
         self.smtp_port = 587
         self.sender_email = os.getenv("SENDER_EMAIL")
-        self.sender_password = "sljj wflv sxhb zwel"
+        self.sender_password = "imvt xokz krwj pwiv"
         self.receiver_email = os.getenv("RECEIVER_EMAIL")
         self.reward_json = os.getenv("REWARD_JSON")
 
