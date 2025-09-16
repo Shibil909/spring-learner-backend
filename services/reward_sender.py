@@ -31,6 +31,7 @@ class EmailSender:
         RETURNS:
             None
         """
+        server = None 
         try:
             reward_data = load_json(self.reward_json)
             reward_mail = next((r for r in reward_data if r["day"] == day), None)
@@ -65,7 +66,7 @@ class EmailSender:
             
             
             # --- Send Mail ---
-            server = smtplib.SMTP(self.smtp_server, self.smtp_port)
+            server = smtplib.SMTP(self.smtp_server, self.smtp_port, timeout=15)
             server.starttls()
             server.login(self.sender_email, self.sender_password)
             server.sendmail(self.sender_email, self.receiver_email, msg.as_string())
@@ -73,8 +74,9 @@ class EmailSender:
         except Exception as e:
             logger.error(f"Email sender error: {str(e)}")
         finally:
-            try:
-                server.quit()
-            except Exception as e:
-                logger.error(f"mail Server exit error:{str(e)}")
+            if server:
+                try:
+                    server.quit()
+                except Exception as e:
+                    logger.error(f"mail Server exit error:{str(e)}")
         return None
