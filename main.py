@@ -133,12 +133,15 @@ def submit_answers(payload: SubmitAnswersRequest, background_tasks: BackgroundTa
             # Unlock next day
             current_day_num = int(payload.day.split("_")[1])
             next_day = f"day_{current_day_num + 1}"
-            update_day_status(PROGRESS_DB_PATH, next_day, "unlocked")
+
+            # check if next day not greater than 10
+            if (current_day_num + 1) <= 10:
+                update_day_status(PROGRESS_DB_PATH, next_day, "unlocked")
 
             
            
-            # schedule reward mail in background
-            background_tasks.add_task(email_sender.send_reward_sendgrid, payload.day)
+                # schedule reward mail in background
+                background_tasks.add_task(email_sender.send_reward_sendgrid, payload.day)
 
         logger.info(f"Assessment evaluated sucessfully")
         return result
